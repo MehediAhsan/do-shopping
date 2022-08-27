@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header class="bg-slate-800">
-        <div class="navbar">
+    <header class="sticky top-0 z-50">
+        <div class="navbar bg-slate-800 ">
             <div class="flex-1">
               <a class="btn btn-ghost normal-case text-xl">Do Shopping</a>
             </div>
@@ -25,21 +25,29 @@
         <section>
             <div class="grid grid-cols-4 gap-4">
                 <div class="col-span-2">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="card bg-base-100 shadow-xl">
-                            <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                            <div class="card-body">
-                              <h2 class="card-title">Shoes!</h2>
-                              <p>If a dog chews shoes whose shoes does he choose?</p>
-                              <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
-                              </div>
-                            </div>
-                        </div>   
+                    <div id="card-body" class="grid grid-cols-2 gap-4">
+                           
                     </div>
                 </div>
-                <div class="col-span-2">
-                    <h1 class="text-3xl text-center font-semibold">Total added Products</h1>
+                <div class="col-span-2 overflow-x-auto">
+                    <h1 class="text-3xl text-center font-semibold mb-5">Total added Products</h1>
+                    <table class="table w-full">
+                        <thead>
+                            <tr>
+                              <th></th>
+                              <th>Product Name</th>
+                              <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                            <tr>
+                              <th></th>
+                              <th>Total Price</th>
+                              <td>$<span id="total-price">0</span></td>
+                            </tr>
+                    </table>
                 </div>
             </div>
         </section>
